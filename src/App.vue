@@ -1,9 +1,23 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "App",
+  setup() {
+    const clientId = process.env["VUE_APP_PAYPAL_CLIENT_ID"];
+
+    return { clientId };
+  },
+});
+</script>
+
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <p>{{ clientId }}</p>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
