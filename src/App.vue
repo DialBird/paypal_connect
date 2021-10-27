@@ -18,7 +18,6 @@ export default defineComponent({
           grant_type: "client_credentials",
         },
         {
-          withCredentials: true,
           auth: {
             username: clientId,
             password: clientSecret,
@@ -27,13 +26,12 @@ export default defineComponent({
             Accept: "application/json",
             "Accept-Language": "en_US",
             "Content-Type": "application/x-www-form-urlencoded",
-            "Access-Control-Allow-Origin": "*",
             // Authorization: "Basic " + btoa(`${clientId}:${clientSecret}`),
           },
         }
       );
       console.log("fmfm", res);
-      return "hoge";
+      return "hogea";
       // const accessToken =
       //   "A21AAKlSxjgmyZCf9Frn8Gca23A4zpuxdW5H-ZEKKnxOfzZ65yexfBfHhh-Qv-9SniB4JOkcIFdXjMnp7unMFgIaiNwWW81nA";
       // const res: any = await axios.post(
